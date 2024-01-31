@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Game Token Platform</title>
+
+    <!-- CSS Styles-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><img src="GameToken.GIF" alt="Game Token Logo" class="header-logo"></li>
+                <li><a href="index.html">Swap</a></li>
+                <li><a href="mint.html">Mint</a></li>
+                <li><a href="#marketplace">Marketplace  &nbsp;&nbsp;&nbsp; </a></li>
+                <li>
+                    <img src="Metamask-icon.svg" alt="MetaMask" class="metamask-icon">
+                    <a href="#" id="connect-wallet">Connect</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main class="main">
+            <h1>Game Token - Swap</h1>
+
+            <div id="successMessage" style="color: green;"></div>
+            <div id="errorMessage" style="color: red;"></div>
+            <div id="balanceDisplay" style="color: black; font-weight: bold; text-shadow: none;"></div>
+
+            <div class="swap-container">
+                <form id="swapForm">
+                    <div class="input-group">
+                        <label for="ethereumAmount">Ethereum Amount</label>
+                        <input type="number" id="ethereumAmount" name="ethereum" placeholder="0.0" min="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="gameTokenAmount">Game Token Amount</label>
+                        <input type="number" id="gameTokenAmount" name="gametoken" placeholder="0.0" min="0" step="any">
+                    </div>
+                    <button type="submit" id="swapButton">Swap</button>
+                </form>
+            </div>
+    </main>
+
+
+    <!-- Web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+
+    <!-- Script.js -->
+    <script src="listeners.js"></script>
+
+</body>
+</html>

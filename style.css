@@ -1,0 +1,116 @@
+/*
+ * {
+    border: 1px solid red; 
+    box-sizing: border-box;
+}
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(233, 233, 233);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(0, 0, 0, 0.03), rgb(0, 0, 0));
+    background-color: #b16262;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    padding: 10px 0;
+    margin-bottom: 6vh;
+    border-bottom: 1px solid rgb(29, 29, 29);
+}
+
+.header-logo {
+    height: 6vh;
+    width: auto;
+    margin-right: 30px;
+    border: 2px solid rgb(29, 29, 29);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.metamask-icon {
+    height: 17px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+nav {
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+.swap-container {
+    background-color: #a79e9bb9; /* Light background for the swap box */
+    padding: 24px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 330px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="number"] {
+    width: 92%; 
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Border and padding included in width */
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #0000008e;
+    color: rgb(233, 233, 233);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.904)
+}

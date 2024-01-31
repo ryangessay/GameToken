@@ -1,0 +1,29 @@
+**add react, when minting, display image with details
+**add chainlinkVRF, instead of pseudoRandom number function
+
+NOTE**
+-NFT image generation would occur off-chain and stored in a server
+-the metadate of these images is stored in a json format and
+-the smart contract would reference the metadata file
+
+--------------------
+GT contract address: 0x7E48a4dE21D09Adc9BfA78EBFE813E872A40e189
+NFT contract address: 0x0bFD5D9D5286681b6D4C4c7CC56aD1d62662e090
+
+-------------------
+truffle console
+
+const contract = await GameToken.at('0x7E48a4dE21D09Adc9BfA78EBFE813E872A40e189');
+
+const balance = await contract.balanceOf('0x7E48a4dE21D09Adc9BfA78EBFE813E872A40e189');
+console.log(balance.toString());
+
+
+-------------------------------------------
+truffle migrate --reset
+
+truffle migrate --f 3 --to 3 //only migrates from 3 to 3 - 3 being 3_deploy_nft_contact.js
+
+----------------------
+
+npm start, to get the express server running
