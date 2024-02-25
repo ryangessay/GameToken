@@ -83,3 +83,37 @@ CREATE INDEX idx_listingID_transactions ON transactions(listingID);
 CREATE INDEX idx_tokenID_transactions ON transactions(tokenID);
 
 UPDATE listings SET forSale = FALSE WHERE listingID = [the_listing_id];
+
+
+SELECT 
+    tokens.tokenID,
+    tokens.ownerAddress,
+    rarities.rarityName,
+    tokens.mintDate
+FROM 
+    tokens
+INNER JOIN 
+    rarities ON tokens.rarityID = rarities.rarityID;
+
+
+SELECT 
+    tokens.tokenID,
+    tokens.ownerAddress,
+    rarities.rarityName,
+    listings.listingID,
+    listings.listDate,
+    listings.forSale,
+    listings.buyoutPrice,
+    MAX(bids.bidAmount) AS maxBidAmount,
+    MAX(bids.bidDate) AS latestBidDate
+ FROM
+    tokens
+INNER JOIN
+    rarities ON tokens.rarityID = rarities.rarityID
+LEFT JOIN 
+    listings ON tokens.tokenID = listings.tokenID
+LEFT JOIN
+    bids ON bids.listingID = listings.listingID
+GROUP BY
+    tokens.tokenID,
+    listings.listingID;
